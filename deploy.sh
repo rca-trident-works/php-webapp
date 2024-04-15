@@ -66,3 +66,5 @@ while [ $continue -eq 1 ]; do
         _deploy
     fi
 done
+
+logger "info" "Exiting..."
