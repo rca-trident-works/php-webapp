@@ -42,7 +42,7 @@ function logger {
 function _deploy {
     logger info "Deploying..."
     \cp -f -r ${SOURCE_DIR}/* ${HTDOCS_DIR}/
-    logger "succ" "Deployment completed"
+    logger "succ" "✅ Deployment completed "
 }
 
 function _greet {
