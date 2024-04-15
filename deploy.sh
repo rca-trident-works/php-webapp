@@ -58,7 +58,6 @@ continue=1
 _greet
 
 while [ $continue -eq 1 ]; do
-    #read -p "P\e[32m succ  \e[00m Press any key then press enter to deploy again or 'q' to quit: " input
     logger wait "Press any key then press enter to deploy again or 'q' to quit: " "true"
     read input
     if [ "$input" = "q" ]; then
