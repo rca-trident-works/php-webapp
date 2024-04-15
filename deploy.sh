@@ -26,10 +26,16 @@ function logger {
                 head="\e[34m INFO  \e[00m";;
         "succ")
                 head="\e[32m SUCC  \e[00m";;
+        "wait")
+                head="\e[36m WAIT  \e[00m";;
         *)
-                head="$1"
+            head="$1";;
     esac
 
+    if [[ "$3" = "true" ]]; then
+        printf "${head} : ${2}"
+        return
+    fi
     printf "${head} : ${2}\n"
 }
 
@@ -52,7 +58,9 @@ continue=1
 _greet
 
 while [ $continue -eq 1 ]; do
-    read -p "Press any key then press enter to deploy again or 'q' to quit: " input
+    #read -p "P\e[32m succ  \e[00m Press any key then press enter to deploy again or 'q' to quit: " input
+    logger wait "Press any key then press enter to deploy again or 'q' to quit: " "true"
+    read input
     if [ "$input" = "q" ]; then
         continue=0
     else
