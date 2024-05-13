@@ -1,0 +1,5 @@
+<ul>
+<?php for($i = 0; $i < 10; $i++) {
+    print('<img src="image'.$i.'.jpg"');
+} ?>
+</ul>
