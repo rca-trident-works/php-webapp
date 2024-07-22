@@ -4,8 +4,12 @@
 
 <body>
     <h2>Practice</h2>
-    <?php
-    $memos = $db->query('SELECT * FROM memos ORDER BY id DESC');
+        <?php
+        $page = $_REQUEST['page'];
+        $start = 5 * ($page - 1);
+        $memos = $db->prepare('SELECT * FROM memos ORDER BY id DESC LIMIT ?,5');
+        $memos->bindParam(1, $start, PDO::PARAM_INT);
+        $memos->execute();
     ?>
     <article>
         <?php while ($memo = $memos->fetch()): ?>
