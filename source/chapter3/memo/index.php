@@ -5,7 +5,7 @@
 <body>
     <h2>Practice</h2>
     <?php
-    $memos = $db->prepare('SELECT * FROM memos ORDER BY id DESC');
+    $memos = $db->query('SELECT * FROM memos ORDER BY id DESC');
     ?>
     <article>
         <?php while ($memo = $memos->fetch()): ?>
