@@ -14,6 +14,7 @@
     }
     ?>
     <form action="update_do.php" method="post">
+        <input type="hidden" name="id" value="<?php print($id); ?>">
         <textarea name="memo" cols="50" rows="10"><?php print($memo['memo']); ?></textarea><br>
         <button type="submit">登録する</button>
         <article>
