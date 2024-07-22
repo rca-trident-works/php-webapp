@@ -12,8 +12,8 @@
     }
     ?>
 
-        <pre>
+    <pre>
         <p>メモを削除しました</p>
         </pre>
-        <p><a href="index.php">戻る</a></p>
+    <p><a href="index.php">戻る</a></p>
 </body>
