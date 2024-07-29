@@ -15,11 +15,11 @@ if ($ext === '.gif' || $ext === '.jpg' || $ext === '.png') :
 
     if ($success) :
 ?>
-<img src="<?php print $filePath; ?>">
+        <img src="<?php print $filePath; ?>">
     <?php else: ?>
-※ファイルアップロードに失敗しました
+        ※ファイルアップロードに失敗しました
     <?php endif; ?>
 
 <?php else: ?>
-※拡張子が.gif, .jpg, .pngのいずれかのファイルをアップロードしてください
+    ※拡張子が.gif, .jpg, .pngのいずれかのファイルをアップロードしてください
 <?php endif; ?>
