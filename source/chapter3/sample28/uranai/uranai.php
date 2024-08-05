@@ -16,4 +16,3 @@ $fortuneMap = [
 
 // メッセージと画像を2行で表示
 echo "あなたの{$today}の運勢は" . $fortuneMap[$fortuneIndex]["label"] . "です．<br><img src='" . $fortuneMap[$fortuneIndex]["image"] . "' alt='" . $fortuneMap[$fortuneIndex]["label"] . "' />";
-?>
